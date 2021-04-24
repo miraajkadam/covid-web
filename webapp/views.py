@@ -74,9 +74,9 @@ def index(request):
                       html_message=None)
         else:
             positive = False
-            str = "You are negative"
+            message = "You are covid negative, but being negative doesn't ensures that you will stay negative.\n\nMentioned below are some important ways to help keep you and your family safe.\n1. Wear a mask that covers your nose and mouth to help protect yourself and others.\n2. Stay 6 feet apart from others who don’t live with you.\n3. Get a COVID-19 vaccine when it is available to you.\n4. Avoid crowds and poorly ventilated indoor spaces.\n5. Wash your hands often with soap and water. Use hand sanitizer if soap and water aren’t available.\n\nStay safe and healthy...!\n\n\nRegards,\nMiraaj, Neeraj, Paras\nTeam Covid"
             send_mail('You are negative!',
-                      str,
+                      message,
                       'Team Covid', [email],
                       fail_silently=False,
                       html_message=None)
