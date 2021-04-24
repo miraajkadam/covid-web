@@ -1,0 +1,247 @@
+:root {
+  font-size: 12px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: #f7f7f7;
+}
+
+p {
+  margin-bottom: 0;
+}
+
+.content {
+  text-align: center;
+}
+
+.content .upper-part {
+  min-height: calc(100vh - 120px);
+}
+
+.content .upper-part form {
+  margin: 30px auto 60px;
+  padding: 20px 30px;
+  width: 30%;
+  border-radius: 20px;
+  background-color: #e0e0e0;
+  text-align: center;
+}
+
+.content .upper-part form .custom-file:active {
+  outline: 3px solid #75acdf;
+  -webkit-transition: all 0.1s ease;
+  transition: all 0.1s ease;
+}
+
+.content .upper-part form .custom-file-input {
+  cursor: pointer;
+}
+
+.content .upper-part form .custom-file-input:hover {
+  cursor: pointer;
+}
+
+.content .upper-part form .submit-button {
+  height: 30px;
+  width: 20%;
+  margin-top: 1rem;
+  border-radius: 20px;
+  border: none;
+  font-weight: 600;
+  background-color: #5cb85c;
+  color: #fff;
+}
+
+.content .upper-part form .submit-button:hover {
+  cursor: pointer;
+  background-color: #448b44;
+}
+
+.content .upper-part .box .left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.content .upper-part .box .left img {
+  margin: 10px auto 20px;
+  height: 350px;
+  width: 300px;
+  border-radius: 20px;
+}
+
+.content .upper-part .box .right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.content .upper-part .box .right .probabilities {
+  border-collapse: collapse;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+}
+
+.content .upper-part .box .right .probabilities tr th {
+  border: 1px solid #ddd;
+  padding: 60px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  background-color: #3f803f;
+  color: white;
+  font-size: 1.9rem;
+}
+
+.content .upper-part .box .right .probabilities tr td {
+  padding: 10px 20px;
+  text-align: center;
+  font-size: 1.7rem;
+}
+
+.content .upper-part .box .right .probabilities tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.content .upper-part .box .right .probabilities tr:hover {
+  background-color: #ddd;
+}
+
+.content .upper-part .upper-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 50px;
+}
+
+.content .upper-part .upper-box p {
+  font-size: 1.6rem;
+  padding: 0 30px;
+}
+
+.content .upper-part .upper-box p span {
+  font-weight: 700;
+}
+
+.content .upper-part .result {
+  margin-top: 20px;
+}
+
+.content .upper-part .result p {
+  font-size: 1.9rem;
+}
+
+.content .upper-part .result p .res {
+  font-weight: 700;
+  border-left: 5px solid black;
+  padding-left: 10px;
+}
+
+.content .upper-part .result p .cov-pos {
+  color: Red;
+  border-right: 5px solid black;
+  padding-right: 10px;
+  background-color: #ffdfdf;
+}
+
+.content .upper-part .result p .cov-neg {
+  color: #056e05;
+  border-right: 5px solid black;
+  padding-right: 10px;
+  background-color: #d7ffd7;
+}
+
+.content .lower-part {
+  text-align: right;
+  padding-right: 20px;
+  padding-bottom: 10px;
+  font-size: 1.1rem;
+}
+
+.content .lower-part span {
+  font-weight: 700;
+}
+
+.custom-file-input:lang(en)::after {
+  content: "Select file...";
+}
+
+.custom-file-input:lang(en)::before {
+  content: "Click me";
+}
+
+/*when a value is selected, this class removes the content */
+.custom-file-input.selected:lang(en)::after {
+  content: "" !important;
+}
+
+.custom-file {
+  overflow: hidden;
+}
+
+.custom-file-input {
+  white-space: nowrap;
+}
+
+@media (max-width: 1428px) {
+  .content .upper-part form {
+    width: 50%;
+  }
+}
+
+@media (max-width: 1200px) {
+  .content .upper-part form {
+    width: 60%;
+  }
+}
+
+@media (max-width: 992px) {
+  .content .upper-part {
+    padding-bottom: 100px;
+  }
+  .content .upper-part form {
+    width: 70%;
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .content .upper-part form {
+    width: 90%;
+  }
+}
+
+@media (max-width: 576px) {
+  .content .upper-part form {
+    width: 98%;
+  }
+  .content .upper-part .upper-box p {
+    padding: 0 10px;
+  }
+}
+/*# sourceMappingURL=main.css.map */

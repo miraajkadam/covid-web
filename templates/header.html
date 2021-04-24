@@ -1,0 +1,37 @@
+{% block header %}
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand" href="{% url 'index' %}">Covid Detection using Chest X-Ray Scans</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'index' %}">Upload</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://covid19.who.int/" target="_blank">WHO Dashboard</a>
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            href="https://www.cdc.gov/coronavirus/2019-ncov/prevent-getting-sick/prevention.html"
+            target="_blank"
+            >CDC Guidelines</a
+          >
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+{% endblock header %}

@@ -1,0 +1,89 @@
+{% extends 'base.html' %} 
+{% load static %} 
+
+{% block title %} 
+Covid Detection
+{% endblock title %} 
+
+{% block style %} 
+<link rel="stylesheet" href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.min.css">
+<link rel="stylesheet" href="{% static 'webapp/css/main.css' %}">
+{% endblock style %} 
+
+{% block content %}
+<div class="content">
+  <div class="upper-part">
+    <form method="POST" enctype="multipart/form-data">
+      {% csrf_token %}
+      <label for="emai">Enter your Email</label>
+      <input class="email-input" type="email" name="email" required></input>
+      <div class="custom-file">
+        <input class="custom-file-input" type="file" name="imageFile" id="imageFile" accept="image/*" required />
+        <label class="custom-file-label"  for="imageFile">Choose a X-ray Image</label>
+      </div>
+      <input class="submit-button" type="submit" name="submit" value="Submit" />
+    </form>
+
+    {% if context %}
+    <div class="container">
+      <div class='row box'>
+        <div class="col-lg-6 left">
+          <img src="{{ context.image_src }}" alt="xray-image">
+        </div>
+        <div class="col-lg-6 right">      
+          <table class="probabilities" id="myTable">
+            <thead>
+              <tr>
+                <th>Class</th>
+                <th>Probability</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Normal</td>
+                <td>{{ context.probabilities.0 }}</td>
+              </tr>
+              <tr>
+                <td>Viral</td>
+                <td>{{ context.probabilities.1 }}</td>
+              </tr>
+              <tr>
+                <td>Covid</td>
+                <td>{{ context.probabilities.2 }}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    
+    <div class="container">
+      <div class="upper-box">
+        <p><span>Class Index:</span> {{ context.predicted_class_index }}</p>
+        <p><span>Found:</span> {{ context.predicted_class_name | title }}</p>
+      </div>
+    </div>
+    
+
+    {% if context.positive %}
+    <div class="result">
+      <p><span class="res">Result:</span> <span class="cov-pos">Positive</span></p>
+    </div>
+    {% else %}
+    <div class="result">
+      <p><span class="res">Result:</span> <span class="cov-neg">Negative</span></p>
+    </div>
+    {% endif %}
+  </div>
+  <div class="lower-part">
+    <p><span>File Name:</span> {{ context.file_name }}</p>
+    <p><span>File Path:</span> {{ context.file_url }}</p>
+  </div>
+</div>
+  {% endif %}
+{% endblock content %}
+
+{% block script %}
+<script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
+<script src="{% static 'webapp/js/main.js' %}"></script>
+{% endblock script %}

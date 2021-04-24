@@ -1,0 +1,249 @@
+:root {
+  font-size: 12px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: #f7f7f7;
+}
+
+p {
+  margin-bottom: 0;
+}
+
+.content {
+  text-align: center;
+
+  .upper-part {
+    min-height: calc(100vh - 120px);
+
+    form {
+      margin: 30px auto 60px;
+      padding: 20px 30px;
+      width: 30%;
+      border-radius: 20px;
+      background-color: #e0e0e0;
+      text-align: center;
+
+      .custom-file:active {
+        outline: 3px solid rgb(117, 172, 223);
+        transition: all 0.1s ease;
+      }
+      .custom-file-input {
+        cursor: pointer;
+      }
+
+      .custom-file-input:hover {
+        cursor: pointer;
+      }
+
+      .submit-button {
+        height: 30px;
+        width: 20%;
+        margin-top: 1rem;
+        border-radius: 20px;
+        border: none;
+        font-weight: 600;
+        background-color: #5cb85c;
+        color: #fff;
+      }
+
+      .submit-button:hover {
+        cursor: pointer;
+        background-color: #448b44;
+      }
+    }
+
+    .box {
+      .left {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img {
+          margin: 10px auto 20px;
+          height: 350px;
+          width: 300px;
+          border-radius: 20px;
+        }
+      }
+
+      .right {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .probabilities {
+          border-collapse: collapse;
+          border: 1px solid #ddd;
+          border-radius: 10px;
+
+          tr {
+            th {
+              border: 1px solid #ddd;
+              padding: 60px;
+              padding-top: 12px;
+              padding-bottom: 12px;
+              text-align: center;
+              background-color: #3f803f;
+              color: white;
+              font-size: 1.9rem;
+            }
+
+            td {
+              padding: 10px 20px;
+              text-align: center;
+              font-size: 1.7rem;
+            }
+          }
+          tr:nth-child(even) {
+            background-color: #f2f2f2;
+          }
+
+          tr:hover {
+            background-color: #ddd;
+          }
+        }
+      }
+    }
+
+    .upper-box {
+      display: flex;
+      justify-content: center;
+      margin-top: 50px;
+
+      p {
+        font-size: 1.6rem;
+        padding: 0 30px;
+
+        span {
+          font-weight: 700;
+        }
+      }
+    }
+
+    .result {
+      margin-top: 20px;
+
+      p {
+        font-size: 1.9rem;
+
+        .res {
+          font-weight: 700;
+          border-left: 5px solid black;
+          padding-left: 10px;
+        }
+
+        .cov-pos {
+          color: Red;
+          border-right: 5px solid black;
+          padding-right: 10px;
+          background-color: rgb(255, 223, 223);
+        }
+        .cov-neg {
+          color: rgb(5, 110, 5);
+          border-right: 5px solid black;
+          padding-right: 10px;
+          background-color: rgb(215, 255, 215);
+        }
+      }
+    }
+  }
+
+  .lower-part {
+    text-align: right;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    font-size: 1.1rem;
+
+    span {
+      font-weight: 700;
+    }
+  }
+}
+
+.custom-file-input:lang(en)::after {
+  content: "Select file...";
+}
+
+.custom-file-input:lang(en)::before {
+  content: "Click me";
+}
+
+/*when a value is selected, this class removes the content */
+.custom-file-input.selected:lang(en)::after {
+  content: "" !important;
+}
+
+.custom-file {
+  overflow: hidden;
+}
+.custom-file-input {
+  white-space: nowrap;
+}
+
+@media (max-width: 1428px) {
+  .content {
+    .upper-part {
+      form {
+        width: 50%;
+      }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .content {
+    .upper-part {
+      form {
+        width: 60%;
+      }
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .content {
+    .upper-part {
+      padding-bottom: 100px;
+
+      form {
+        width: 70%;
+        margin-bottom: 30px;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .content {
+    .upper-part {
+      form {
+        width: 90%;
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .content {
+    .upper-part {
+      form {
+        width: 98%;
+      }
+      .upper-box {
+        p {
+          padding: 0 10px;
+        }
+      }
+    }
+  }
+}
