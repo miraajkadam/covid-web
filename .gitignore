@@ -2,5 +2,9 @@ venv/
 __pycache__/
 db.sqlite3
 
+*.png
+*.jpg
+*.jpeg
+
 *.pyc
 .env
