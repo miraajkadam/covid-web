@@ -20,7 +20,7 @@ p {
 }
 
 .content {
-  text-align: center;
+  // text-align: center;
 
   .upper-part {
     min-height: calc(100vh - 120px);
@@ -31,7 +31,55 @@ p {
       width: 30%;
       border-radius: 20px;
       background-color: #e0e0e0;
-      text-align: center;
+      // text-align: center;
+
+      .custom-file {
+        text-align: center;
+      }
+
+      .other-inputs {
+        text-align: center;
+      }
+      label[for="name"] {
+        display: inline-block;
+        margin-top: 0.1rem;
+        margin-bottom: 0;
+        font-size: 1.4rem;
+        font-weight: 400;
+        text-align: center;
+      }
+
+      input[type="text"] {
+        display: inline-block;
+        width: 45%;
+        margin-left: 1rem;
+        border-radius: 5px;
+        border: none;
+        outline: none;
+        background-color: #fff;
+        padding: 1px 5px;
+        -moz-appearance: textfield;
+      }
+
+      label[for="email"] {
+        display: inline-block;
+        margin-top: 0.1rem;
+        margin-bottom: 0;
+        font-size: 1.4rem;
+        font-weight: 400;
+      }
+
+      input[type="email"] {
+        display: inline-block;
+        width: 45%;
+        margin-left: 1rem;
+        border-radius: 5px;
+        border: none;
+        outline: none;
+        background-color: #fff;
+        padding: 1px 5px;
+        -moz-appearance: textfield;
+      }
 
       .custom-file:active {
         outline: 3px solid rgb(117, 172, 223);
@@ -45,10 +93,14 @@ p {
         cursor: pointer;
       }
 
+      .input-button {
+        text-align: right;
+      }
+
       .submit-button {
         height: 30px;
         width: 20%;
-        margin-top: 1rem;
+        margin-top: 2rem;
         border-radius: 20px;
         border: none;
         font-weight: 600;
@@ -132,6 +184,7 @@ p {
 
     .result {
       margin-top: 20px;
+      text-align: center;
 
       p {
         font-size: 1.9rem;

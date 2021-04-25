@@ -15,13 +15,20 @@ Covid Detection
   <div class="upper-part">
     <form method="POST" enctype="multipart/form-data">
       {% csrf_token %}
-      <label for="emai">Enter your Email</label>
-      <input class="email-input" type="email" name="email" required></input>
+      
       <div class="custom-file">
         <input class="custom-file-input" type="file" name="imageFile" id="imageFile" accept="image/*" required />
         <label class="custom-file-label"  for="imageFile">Choose a X-ray Image</label>
+      </div><hr />
+      <div class="other-inputs">
+        <label for="name">Enter Patient's Name: </label>
+        <input class="name-input" type="text" name="name" required></input>
+        <label for="email">Enter Patient's Email ID: </label>
+        <input class="email-input" type="email" name="email" required></input>
       </div>
-      <input class="submit-button" type="submit" name="submit" value="Submit" />
+      <div class="input-button">
+        <input class="submit-button" type="submit" name="submit" value="Submit" />
+      </div>
     </form>
 
     {% if context %}
