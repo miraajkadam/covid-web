@@ -93,7 +93,7 @@ resnet18.fc = torch.nn.Linear(in_features=512, out_features=3)
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 resnet18.load_state_dict(torch.load(
-    os.path.join(BASE_DIR, 'webapp\\covid_classifier.pt')))
+    os.path.join(BASE_DIR, 'webapp\\covid_classifier_1.pt')))
 resnet18.eval()
 
 
