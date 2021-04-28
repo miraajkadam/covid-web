@@ -17,7 +17,8 @@ from pathlib import Path
 
 
 def cov_pos_msg(name, prob_ar):
-    return f'Hello {name}, I am sorry to tell you this but your X-Ray has been classified as covid positive. You would need to get tested from a covid facility to get ensured about the results where you would be informed about the further steps.\
+    return f'Hello {name}, I am sorry to tell you this but your X-Ray has been classified as covid positive.\
+    		\nYou would need to get tested from a covid facility to get ensured about the results where you would be informed about the further steps.\
             \
             \
             \n\nYour X-Rays were classified with following probablities:\
