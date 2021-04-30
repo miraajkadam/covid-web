@@ -1,0 +1,1 @@
+web: gunicorn cvdproj.wsgi --log-file-
