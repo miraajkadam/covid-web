@@ -115,8 +115,8 @@ def predict_image_class(image_path):
 
 def index(request):
     if(request.method == "POST"):
-        email = request.POST.get('email')
-        name = request.POST.get('name')
+        # email = request.POST.get('email')
+        # name = request.POST.get('name')
         file = request.FILES['imageFile']
         file_name = default_storage.save(file.name, file)
         file_url = default_storage.path(file_name)
@@ -127,7 +127,7 @@ def index(request):
 
         if(predicted_class_index == 2):
             positive = True
-            message = cov_pos_msg(name, prob_ar)
+            # message = cov_pos_msg(name, prob_ar)
             # send_mail('You are Positive!',
             #           message,
             #           'Team Covid', [email],
@@ -135,7 +135,7 @@ def index(request):
             #           html_message=None)
         else:
             positive = False
-            message = cov_neg_msg(name, prob_ar)
+            # message = cov_neg_msg(name, prob_ar)
 
             # send_mail('You are negative!',
             #           message,
