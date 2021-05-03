@@ -128,20 +128,20 @@ def index(request):
         if(predicted_class_index == 2):
             positive = True
             message = cov_pos_msg(name, prob_ar)
-            send_mail('You are Positive!',
-                      message,
-                      'Team Covid', [email],
-                      fail_silently=False,
-                      html_message=None)
+            # send_mail('You are Positive!',
+            #           message,
+            #           'Team Covid', [email],
+            #           fail_silently=False,
+            #           html_message=None)
         else:
             positive = False
             message = cov_neg_msg(name, prob_ar)
 
-            send_mail('You are negative!',
-                      message,
-                      'Team Covid', [email],
-                      fail_silently=False,
-                      html_message=None)
+            # send_mail('You are negative!',
+            #           message,
+            #           'Team Covid', [email],
+            #           fail_silently=False,
+            #           html_message=None)
 
         image_src = "../../../media/" + file_name
 
